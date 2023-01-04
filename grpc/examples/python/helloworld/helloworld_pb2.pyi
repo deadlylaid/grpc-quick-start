@@ -4,6 +4,18 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
+class GetRequestReq(_message.Message):
+    __slots__ = ["member_rowid"]
+    MEMBER_ROWID_FIELD_NUMBER: _ClassVar[int]
+    member_rowid: int
+    def __init__(self, member_rowid: _Optional[int] = ...) -> None: ...
+
+class GetRequestResp(_message.Message):
+    __slots__ = ["request_rowid"]
+    REQUEST_ROWID_FIELD_NUMBER: _ClassVar[int]
+    request_rowid: int
+    def __init__(self, request_rowid: _Optional[int] = ...) -> None: ...
+
 class HelloReply(_message.Message):
     __slots__ = ["message"]
     MESSAGE_FIELD_NUMBER: _ClassVar[int]

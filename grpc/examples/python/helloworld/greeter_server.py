@@ -29,6 +29,9 @@ class Greeter(helloworld_pb2_grpc.GreeterServicer):
   def SayHelloAgain(self, request, context):
     return helloworld_pb2.HelloReply(message='Hello again, %s!' % request.name)
 
+  def get_request_id(self, request, context):
+    return helloworld_pb2.GetRequestResp(request_rowid=91234)
+
 
 def serve():
   port = '50051'

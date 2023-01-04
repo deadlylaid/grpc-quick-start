@@ -29,6 +29,8 @@ def run():
     print("Greeter client received: " + response.message)
     response = stub.SayHelloAgain(helloworld_pb2.HelloRequest(name='you'))
     print("Greeter client received: " + response.message)
+    request_rowid = stub.get_request_id(helloworld_pb2.GetRequestReq(member_rowid=12390))
+    print("request_rowid is", request_rowid, "!!!!")
 
 
 if __name__ == '__main__':
